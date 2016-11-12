@@ -12,16 +12,6 @@ Dica 3: pegue a ID da thread usando a função pthread_self().
 
 parte 2
 
-+ Cigarette smokers problem
-
 + Santa Claus problem
 
-+ River crossing problem
-
-+ Multi-car roller coaster problem
-
-+ No-starve unisex bathroom problem
-
-+ Sushi bar problem
-
-+ The senate bus problem
+The Little Book Semaphores - pág 137
