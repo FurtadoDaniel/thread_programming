@@ -2,7 +2,7 @@ IMPLEMENTAÇÃO
 
 parte 1
 
-1 - Faça um programa que crie N threads (N é um dado de entrada lido do teclado). A primeira thread criada é a "thread01", a segunda é a "thread02", e assim por diante. Cada thread, quando executar, deverá imprimir na tela "Eu sou a threadXX e meu ID é YY", onde YY é o ID que o sistema operacional dá para a thread (tipo pthread_t, primeiro campo da função pthread_create). Explique as saídas do programa quando este é executado. NÃO USE VARIÁVEIS GLOBAIS!!!
+1 - Faça um programa que crie N threads (N é um dado de entrada lido do teclado). A primeira thread criada é a "thread01", a segunda é a "thread02", e assim por diante. Cada thread, quando executar, deverá imprimir na tela "Eu sou a threadXX e meu ID é YY", onde YY é o ID que o sistema operacional dá para a thread (tipo pthread_t, primeiro campo da função pthread_create). ---Explique as saídas do programa quando este é executado.--- NÃO USE VARIÁVEIS GLOBAIS!!!
 
 Dica 1: para imprimir uma variável do tipo pthread_t use %u.  
 Dica 2: quando criar uma thread "threadXX", passe este valor como parâmetro para ela.
