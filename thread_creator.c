@@ -4,16 +4,17 @@
 //structure for a list of threads
 struct list {
 	pthread_t thread;
+	int name;
 	struct lista *next;
 };
 
-void* saymyname(int * name) {
+void* saymyname(int name) {
 
     pthread_t id = pthread_self();//get the ID of a thread
-    printf("\nThread%d reporting for duty, my PID its %u", name, id);
+    printf("\n Eu sou a Thread%d e meu id e %u", name, id);
     
     return NULL;
-}
+}\
 
 int main() {
 
@@ -27,7 +28,8 @@ int main() {
     //create a thread and pu in the list
     for (int j=0; j<i; j++) {
     	aux = (struct list *) malloc (sizeof (struct list));
-        pthread_create(&(aux->thread), NULL, &saymyname, j);
+    	aux->name = j;
+        pthread_create(&(aux->thread), NULL, &saymyname, aux->name);
         aux->next = first;
         first = aux;
     }
