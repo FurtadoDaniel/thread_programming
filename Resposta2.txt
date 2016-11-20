@@ -1,0 +1,4 @@
+pthread_self() retorna o ID numa visão do processo.
+gettid() retorna o ID numa visão do sistema.
+
+gettid() não foi implementado
