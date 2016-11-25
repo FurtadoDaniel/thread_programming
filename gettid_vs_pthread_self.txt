@@ -1,0 +1,17 @@
+gettid
+
+O Linux 2.4 introduziu uma nova chamada de sistema, gettid(), para permitir que um thread obtenha seu próprio ID de thread.
+
+Cada segmento dentro de um grupo de threads é distinguido por um identificador de thread exclusivo. Um ID de segmento é representado usando o mesmo tipo de dados que é usado para um ID de processo, pid_t. As identificações de thread são únicas em todo o sistema e o kernel garante que nenhum ID de thread será o mesmo que qualquer ID de processo no sistema, exceto quando um thread for o líder do grupo de threads para um processo.
+
+pthread_self
+
+Cada segmento dentro de um processo é identificado exclusivamente por um ID de segmento. Uma thread pode obter seu próprio ID usando pthread_self ().
+
+A função pthread_equal() é necessária para comparar ids thread porque o tipo de dados pthread_t deve ser tratado como dados opacos.
+
+Nas implementações de enfileiramento do Linux, os IDs de thread são exclusivos em todos os processos. No entanto, isso não é necessariamente o caso em outras implementações, e SUSv3 explicitamente observa que um aplicativo não pode portably usar um ID de segmento para identificar um segmento em outro processo.
+
+Gettid vs pthread_self
+
+Os IDs de thread POSIX não são iguais aos IDs de thread retornados pela chamada de sistema gettid () específica do Linux. Os IDs de thread POSIX são atribuídos e mantidos pela implementação de threading. O ID da thread retornado por gettid() é um número (semelhante a um ID de processo) atribuído pelo kernel.
