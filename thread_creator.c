@@ -1,5 +1,8 @@
 #include <pthread.h>
 #include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <sys/syscall.h>
 
 //structure for a list of threads
 struct list {
@@ -11,10 +14,10 @@ struct list {
 void* saymyname(int name) {
 
     pthread_t id = pthread_self();//get the ID of a thread
-    printf("\n Eu sou a Thread%d e meu id e %u", name, id);
+    printf("\n Eu sou a Thread%d e meu id e %u e meu TId e %d", name, id, syscall(SYS_gettid));
     
     return NULL;
-}\
+}
 
 int main() {
 
