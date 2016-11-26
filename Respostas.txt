@@ -1,4 +1,5 @@
 comando para compilar: gcc thread_creator.c -o thread_creator.exe -lpthread 
+                       gcc santa_claus.c -o santa_claus.exe -lpthread 
 
 pthread_self() retorna o ID numa visão do processo.
 gettid() retorna o ID numa visão do sistema.
