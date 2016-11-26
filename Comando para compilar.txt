@@ -1,0 +1,3 @@
+gcc thread_creator.c -o thread_creator.exe -lpthread 
+gcc santa_claus.c -o santa_claus.exe -lpthread 
+
